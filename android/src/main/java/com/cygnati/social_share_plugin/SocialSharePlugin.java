@@ -38,11 +38,8 @@ public class SocialSharePlugin
 
     private Activity activity;
     private MethodChannel channel;
-    private final CallbackManager callbackManager;
 
-    public SocialSharePlugin() {
-        this.callbackManager = CallbackManager.Factory.create();
-    }
+    public SocialSharePlugin() {}
 
     @Override
     public void onAttachedToEngine(@NonNull FlutterPluginBinding binding) {
@@ -99,7 +96,7 @@ public class SocialSharePlugin
 
             return true;
         }
-        return callbackManager.onActivityResult(requestCode, resultCode, data);
+        return true;
     }
 
     @Override
